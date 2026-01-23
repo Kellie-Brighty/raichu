@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // CA Copier logic
     const caCopier = document.getElementById('ca-copier');
-    const FULL_CA = "0x0000000000000000000000000000000000000000";
+    const FULL_CA = "0xDB8B5FE43320FD4BE784150D1AcF6ce27561fC8B";
 
     caCopier.addEventListener('click', () => {
         navigator.clipboard.writeText(FULL_CA).then(() => {
@@ -58,43 +58,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// YouTube IFrame Player API Integration
-let player;
+// Background Audio Control
+const audio = document.getElementById('bg-audio');
 const musicBtn = document.getElementById('music-toggle');
 let isPlaying = false;
-let isPlayerReady = false;
-
-window.onYouTubeIframeAPIReady = function() {
-    player = new YT.Player('youtube-player', {
-        height: '1',
-        width: '1',
-        videoId: 'M9ucTqmwFCI',
-        playerVars: {
-            'autoplay': 0,
-            'controls': 0,
-            'loop': 1,
-            'playlist': 'M9ucTqmwFCI',
-            'origin': window.location.origin || '*'
-        },
-        events: {
-            'onReady': onPlayerReady
-        }
-    });
-};
-
-function onPlayerReady(event) {
-    isPlayerReady = true;
-}
 
 musicBtn.addEventListener('click', () => {
-    if (!player || !isPlayerReady) return;
-
     if (isPlaying) {
-        player.pauseVideo();
+        audio.pause();
         musicBtn.querySelector('.icon').innerText = '🔇';
         musicBtn.classList.remove('playing');
     } else {
-        player.playVideo();
+        audio.play().catch(e => console.error("Audio play failed:", e));
         musicBtn.querySelector('.icon').innerText = '🔊';
         musicBtn.classList.add('playing');
     }
