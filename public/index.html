@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raichu | The Thunderous Legend</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="lightning-overlay" id="lightning-overlay"></div>
+
+    <header class="hero">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="Raichu_Playing_A_Game_GIF.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-content">
+        <h1 class="glow-text">RAICHU</h1>
+        <p class="subtitle">The Evolution of a Legend</p>
+
+        <div class="hero-actions">
+          <div class="ca-wrapper">
+            <div class="ca-container glass" id="ca-copier">
+              <span class="ca-label">CA:</span>
+              <span class="ca-value">0x00...0000</span>
+              <div class="copy-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://x.com/RaichuOnErc20" target="_blank" class="social-btn x-btn" title="Follow on X">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="scroll-indicator">
+          <span>SCROLL TO CHARGE</span>
+          <div class="bolt">⚡</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section narrative reveal" id="origins">
+        <div class="container">
+          <div class="grid">
+            <div class="text-content">
+              <h2>Born from lightning</h2>
+              <p>
+                First introduced in 1996, Raichu was brought to life by
+                <strong>Atsuko Nishida</strong> and finalized by
+                <strong>Ken Sugimori</strong>. As the evolved form of the iconic
+                Pikachu, it embodies a power that transcends its precursor.
+              </p>
+            </div>
+            <div class="image-wrapper floating">
+              <img src="raichu.webp" alt="Classic Raichu" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section stats reveal" id="power">
+        <div class="container">
+          <h2 class="center">Shocking Potential</h2>
+          <div class="stat-grid">
+            <div class="stat-card glass">
+              <h3>100k+ Volts</h3>
+              <p>
+                Raichu's tail acts as a ground, protecting it from its own
+                high-voltage discharges.
+              </p>
+            </div>
+            <div class="stat-card glass">
+              <h3>Thunderous Speed</h3>
+              <p>
+                Known for its agility in battle, it can outpace almost any
+                opponent when charged.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section narrative alolan reveal" id="variant">
+        <div class="container">
+          <div class="grid reverse">
+            <div class="text-content">
+              <h2>The Alolan Surfer</h2>
+              <p>
+                In the Alola region, Raichu takes on a Psychic/Electric form,
+                using its tail as a surfboard. This unique evolution highlights
+                the adaptability of this incredible species.
+              </p>
+            </div>
+            <div class="image-wrapper floating">
+              <img src="raichu-alolan.jpg" alt="Alolan Raichu" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section final reveal">
+        <div class="container center">
+          <div class="image-wrapper large-float">
+            <img src="raichu-2.webp" alt="Raichu Strike" />
+          </div>
+          <h2>Ready to Battle?</h2>
+          <p>
+            Raichu remains one of the most beloved and powerful allies for
+            trainers across the globe.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2026 Pokémon Tribute Project. All images and characters belong to
+        Nintendo/Game Freak.
+      </p>
+    </footer>
+
+    <!-- Local Background Audio -->
+    <audio id="bg-audio" loop>
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-toggle" class="music-btn glass" title="Toggle Sound">
+      <span class="icon">🔊</span>
+      <span class="music-pulse"></span>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
